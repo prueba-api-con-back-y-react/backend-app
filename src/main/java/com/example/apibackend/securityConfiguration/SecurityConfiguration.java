@@ -23,8 +23,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/user/**").permitAll()
                 .antMatchers("/user").permitAll()
                 .antMatchers("http://localhost:8080/**").permitAll()
-                .anyRequest().authenticated()
-                .and().logout().and()
+                .and()
                 .httpBasic();
     }
 
